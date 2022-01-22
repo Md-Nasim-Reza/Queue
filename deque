@@ -1,0 +1,28 @@
+#include<bits/stdc++.h> //codeforcses problem 1579E1
+using namespace std;
+void solve(){
+    long long int n,i,a;
+    deque<long long int>dq;
+    cin>>n;
+    cin>>a;
+    dq.push_back(a);
+    for(i=0; i<n-1; i++){
+        cin>>a;
+        if(dq.front()<a)
+            dq.push_back(a);
+        else
+            dq.push_front(a);
+
+    }
+    for(auto it:dq)
+        cout<<it<<" ";
+    cout<<endl;
+}
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        solve();
+    }
+return 0;
+}
